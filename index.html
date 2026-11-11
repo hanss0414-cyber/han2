@@ -93,6 +93,18 @@
   <div class="contact-inner reveal">
     <p class="eyebrow">LET'S WORK TOGETHER</p><h2>새로운 프로젝트를<br><span>시작해볼까요?</span></h2>
     <p>아이디어가 있거나 함께 만들고 싶은 프로젝트가 있다면 편하게 연락해주세요.</p>
+    <div class="guestbook">
+      <h3>방문자 댓글 남기기</h3>
+      <p class="guestbook-note">응원이나 의견을 자유롭게 남겨주세요. 댓글은 Google 스프레드시트에 전달됩니다.</p>
+      <form id="comment-form" action="https://script.google.com/macros/s/AKfycbznfNXZSXNal_AM_hLYeoSrCIwGdum6QNQddaZEwBpfF0cGAb5pFT0SFY6s4JBNnU026w/exec" method="POST" target="comment-response-frame">
+        <label class="sr-only" for="comment-message">댓글 내용</label>
+        <textarea id="comment-message" name="message" maxlength="500" placeholder="댓글을 입력하세요. (최대 500자)" required></textarea>
+        <input class="comment-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="guestbook-actions"><span><b id="comment-count">0</b> / 500자</span><button id="comment-submit" class="btn primary" type="submit">댓글 등록하기 →</button></div>
+      </form>
+      <p id="comment-status" class="comment-status" role="status" aria-live="polite">작성한 댓글은 문의 시트로 전송됩니다.</p>
+      <iframe name="comment-response-frame" id="comment-response-frame" title="댓글 전송 응답"></iframe>
+    </div>
     <a class="btn primary big" href="mailto:hello@example.com">이메일로 연락하기 →</a>
     <div class="socials"><a href="https://github.com/" target="_blank">GitHub</a><a href="https://codepen.io/" target="_blank">CodePen</a><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></div>
   </div>
